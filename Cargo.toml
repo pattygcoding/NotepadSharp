@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/notepadsharp-core",
+    "crates/notepadsharp-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+
+[workspace.dependencies]
+notepadsharp-core = { path = "crates/notepadsharp-core" }
+
+encoding_rs = "0.8"
+regex = "1.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+eframe = "0.31"
+egui = "0.31"
+rfd = { version = "0.15", default-features = false }
+dirs = "6"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

@@ -1,0 +1,17 @@
+[package]
+name = "notepadsharp-app"
+description = "NotepadSharp — a Notepad++-style text editor built on egui/eframe"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "notepadsharp"
+path = "src/main.rs"
+
+[dependencies]
+notepadsharp-core.workspace = true
+eframe.workspace = true
+egui.workspace = true
+rfd.workspace = true
+dirs.workspace = true

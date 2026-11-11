@@ -1,0 +1,12 @@
+[package]
+name = "notepadsharp-core"
+description = "GUI-free text editing engine (buffer, encodings, highlighting, search, sessions)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+encoding_rs.workspace = true
+regex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
